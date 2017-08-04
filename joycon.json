@@ -1,0 +1,8 @@
+{
+	"ownerid": "ID",
+	"modrolename": "StaffRole",
+	"adminrolename": "AdminRole",
+	"prefix":"Prefix",
+	"token": "Token",
+	"passes" : 1
+}
