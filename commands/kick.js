@@ -1,4 +1,4 @@
-const Discord = require(`discord.js`)
+ const Discord = require(`discord.js`)
 exports.run = async (client, message, args) => {
 
 if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply(":x: || \`It seems you do not have permission\`")
@@ -16,7 +16,7 @@ if (!message.guild.member(user).kickable) return message.reply(':x: || \`I canno
   const embed = new Discord.RichEmbed()
     .setColor(message.member.displayColor)
     .setTimestamp()
-    .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
+    .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason ? reason : "None"}`);
   message.channel.sendEmbed(embed)
 
 
